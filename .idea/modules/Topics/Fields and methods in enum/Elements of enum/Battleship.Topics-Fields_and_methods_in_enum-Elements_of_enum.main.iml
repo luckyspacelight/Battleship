@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Fields_and_methods_in_enum-Elements_of_enum:main" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Fields and methods in enum/Elements of enum" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Battleship" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../../../Topics/Fields and methods in enum/Elements of enum/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Fields and methods in enum/Elements of enum/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../Topics/Fields and methods in enum/Elements of enum/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

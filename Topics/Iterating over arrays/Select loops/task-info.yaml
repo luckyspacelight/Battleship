@@ -1,0 +1,25 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: "for (int i = 0; i &lt;= 3; i++) { System.out.println(nums[i]); }"
+- text: "for (int i = 1; i &lt;= 3; i++) { System.out.println(nums[i]); }"
+- text: "for (int i = nums.length - 1; i &gt;= 0; i--) { System.out.println(nums[i]);\
+    \ }"
+- text: "for (int i = 0; i &lt;= 3; i++) { System.out.println(nums[0]); }"
+- text: "for (int i = 0; i &lt; nums.length; i++) { System.out.println(nums[i]); }"
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3280#comment
+status: Solved
+record: -1
+local_check: false

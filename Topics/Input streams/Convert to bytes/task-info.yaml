@@ -1,0 +1,19 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    import java.io.InputStream;
+
+    class Main {
+        public static void main(String[] args) throws Exception {
+            InputStream inputStream = System.in;
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9097#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Mon, 06 Feb 2023 13:49:15 UTC"
+record: -1

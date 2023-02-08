@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: "the same name, the same number and type of arguments."
+- text: "the same name, the same return type but different type of arguments."
+- text: "the same name, the same return type, the same number and type of arguments."
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2246#comment
+status: Solved
+record: -1
+custom_name: What can two methods have?
+local_check: false

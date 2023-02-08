@@ -1,0 +1,25 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: several methods have the same return types
+- text: several methods have the same name but different number or type of parameters
+- text: several methods have different names but the same number and type of parameter
+- text: several methods have the same name and the same bodies
+- text: several methods have the same name and parameters but different return types
+- text: several methods are public
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3449#comment
+status: Solved
+record: -1
+local_check: false

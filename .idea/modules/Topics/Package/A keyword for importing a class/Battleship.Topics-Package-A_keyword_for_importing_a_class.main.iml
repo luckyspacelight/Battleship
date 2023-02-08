@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Package-A_keyword_for_importing_a_class:main" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Package/A keyword for importing a class" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Battleship" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../../../Topics/Package/A keyword for importing a class/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Package/A keyword for importing a class/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../Topics/Package/A keyword for importing a class/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

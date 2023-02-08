@@ -1,0 +1,30 @@
+<h2>DriverNotReadyException</h2>
+<p>Suppose you have a <code class="java">DriverNotReadyException</code> class with the following declaration: </p>
+
+<pre><code class="java">class DriverNotReadyException extends Exception {
+    public DriverNotReadyException(String message) {
+        super(message);
+    }
+}</code></pre>
+
+<p>Also, you have the following class <code class="java">Driver</code>:</p>
+
+<pre><code class="java">class Driver {
+    String name;
+    Boolean isDoorLocked;
+    Boolean isBeltFastened;
+
+    public void closeDoor() {
+        this.isDoorLocked = true;
+    }
+
+    public void fastenBelt() {
+        this.isBeltFastened = true;
+    }
+
+    public void drive(boolean isBeltFastened, boolean isDoorLocked) throws DriverNotReadyException {
+        //put your code here
+    }
+}</code></pre>
+
+<p>Your task is to write a  <code class="java">drive()</code> method which prints to the console the string <strong><em>Here we go</em></strong> if both arguments are true, or otherwise throws the <code class="java">DriverNotReady</code> exception with the message <em><strong>Close the door or fasten your seatbelt</strong></em></p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">Sam<br>true<br>false</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">Close the door or fasten your seatbelt</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 5 seconds</font><br><br>

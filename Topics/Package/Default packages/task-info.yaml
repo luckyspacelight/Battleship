@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Classes inside the default package are invisible to each other.
+- text: Import statement can't import a class from the default package into a java
+    file inside a named package.
+- text: Import statement can't import a class from a named package into a java file
+    inside the default package.
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2251#comment
+status: Solved
+record: -1
+local_check: false

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Battleship/task" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/test-results" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/Checked exception with constructor" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/Custom exceptions features" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/DriverNotReadyException" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/Exception chaining" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/Handle incorrect inputs" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/Square class" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Fields and methods in enum/Balance management" />
+            <option value="$PROJECT_DIR$/Topics/Fields and methods in enum/Danger levels" />
+            <option value="$PROJECT_DIR$/Topics/Fields and methods in enum/Elements of enum" />
+            <option value="$PROJECT_DIR$/Topics/Fields and methods in enum/Months" />
+            <option value="$PROJECT_DIR$/Topics/Fields and methods in enum/Planets of the solar system" />
+            <option value="$PROJECT_DIR$/Topics/Fields and methods in enum/System of units" />
+            <option value="$PROJECT_DIR$/Topics/Fields and methods in enum/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Input streams/Byte vs character input streams" />
+            <option value="$PROJECT_DIR$/Topics/Input streams/Convert to bytes" />
+            <option value="$PROJECT_DIR$/Topics/Input streams/Count words" />
+            <option value="$PROJECT_DIR$/Topics/Input streams/FileInputStream class" />
+            <option value="$PROJECT_DIR$/Topics/Input streams/Read into an array" />
+            <option value="$PROJECT_DIR$/Topics/Input streams/Reverse input text" />
+            <option value="$PROJECT_DIR$/Topics/Input streams/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Alphabetical order" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Boxes" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Find the sum" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Select loops" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Select one loop" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Sum array elements greater than a value" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/The minimum value of an array" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/A pair of not overloaded methods" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/Overloading methods" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/Print" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/Successful overloading" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/What can two methods have" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/When overloading happens" />
+            <option value="$PROJECT_DIR$/Topics/Package/A keyword for importing a class" />
+            <option value="$PROJECT_DIR$/Topics/Package/Class hierarchy" />
+            <option value="$PROJECT_DIR$/Topics/Package/Creating instances" />
+            <option value="$PROJECT_DIR$/Topics/Package/Default packages" />
+            <option value="$PROJECT_DIR$/Topics/Package/Purpose" />
+            <option value="$PROJECT_DIR$/Topics/Package/Required input" />
+            <option value="$PROJECT_DIR$/Topics/Package/Sorting arrays" />
+            <option value="$PROJECT_DIR$/Topics/Package/The default import" />
+            <option value="$PROJECT_DIR$/Topics/Package/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Collatz conjecture" />
+            <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Squares of natural numbers" />
+            <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The length of the sequence" />
+            <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The sequence" />
+            <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The smallest value" />
+            <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Throwing exceptions/Days of the week" />
+            <option value="$PROJECT_DIR$/Topics/Throwing exceptions/How to throw an exception" />
+            <option value="$PROJECT_DIR$/Topics/Throwing exceptions/Possible declaration" />
+            <option value="$PROJECT_DIR$/Topics/Throwing exceptions/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Throwing exceptions/Throw an IOException" />
+            <option value="$PROJECT_DIR$/Topics/Throwing exceptions/Throwing statements" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: byte input stream can read binary data as a sequence of bytes
+- text: "character input stream can read binary data, immediately converting bytes\
+    \ to characters"
+- text: character input stream cannot read binary data
+- text: byte input stream can read text data as a sequence of characters
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9096#comment
+status: Solved
+record: -1
+local_check: false

@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: "<code>int method(int i) { return i; }</code>"
+- text: "<code>float method(float f) { return f; }</code>"
+- text: "<code>String method(int i, String s) { return s + i; }</code>"
+- text: "<code>void method(int i) { System.out.println(i); }</code>"
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2039#comment
+status: Solved
+record: -1
+local_check: false

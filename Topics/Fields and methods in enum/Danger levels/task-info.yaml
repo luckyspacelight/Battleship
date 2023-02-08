@@ -1,0 +1,20 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    enum DangerLevel {
+        HIGH,
+        MEDIUM,
+        LOW;
+    }
+  learner_created: false
+- name: src/Test.form
+  visible: true
+  learner_created: true
+- name: src/Test.java
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/11529#comment
+status: Solved
+record: -1

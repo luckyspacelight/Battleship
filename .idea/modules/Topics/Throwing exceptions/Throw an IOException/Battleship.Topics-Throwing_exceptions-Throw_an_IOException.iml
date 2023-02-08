@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Throwing_exceptions-Throw_an_IOException" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Throwing exceptions/Throw an IOException" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Battleship" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Throwing exceptions/Throw an IOException">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Throwing exceptions/Throw an IOException/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Throwing exceptions/Throw an IOException/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Throwing exceptions/Throw an IOException/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
