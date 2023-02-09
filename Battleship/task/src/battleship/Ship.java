@@ -94,10 +94,6 @@ public class Ship {
 
         if (noError) {
 
-            /*
-            HACK | Verificare il funzionamento del codice sottostante
-            */
-
             // Insert ship cells in the ship location array
             if(rowFCstr.equals(rowTCstr)) {  // Horizontal ship
                 for (int i = Math.min(colFC, colTC), j = 0; i <= Math.max(colFC, colTC) && j < locationCells.length; i++, j++) {

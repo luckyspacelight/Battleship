@@ -109,14 +109,4 @@ public class ShipsHandler {
         }
     }
 
-    // TEST | Il metodo, da rimuovere
-    public void testInputCoord() {
-        for (Ship ship : ships) {
-            String[][] arTest = ship.getLocationCells();
-            for (int i = 0; i < arTest.length; i++) {
-                System.out.printf("%s, ", arTest[i][0]);
-            }
-        }
-    }
-
 }
