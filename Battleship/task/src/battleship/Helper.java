@@ -57,7 +57,7 @@ public class Helper {
     }
 
 
-    public static boolean checkErrors(int row, int col) {
+    public static boolean checkError(int row, int col) {
 
         boolean noError = true;
 
@@ -94,7 +94,7 @@ public class Helper {
                 }
 
                 col = i;
-                if (arGameField[row][col = col - 1 == 0 ? 0 : col - 1].equals("O")) {
+                if (arGameField[row][col = col == 0 ? 0 : col - 1].equals("O")) {
                     isCloseToAShip = true;
                     break;
                 }

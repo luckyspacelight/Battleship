@@ -29,7 +29,7 @@ public class GameField {
         return arGameField;
     }
 
-    public void showGameField(boolean isSetup) {
+    public void showGameField(boolean isSetup, boolean isFogOfWar) {
 
         // Print header (first row)
         if (gridHdFc) {
@@ -57,10 +57,16 @@ public class GameField {
                     System.out.printf("%c ".toUpperCase(), 'a' + i);
                 }
 
-                // Useful for setup and "the fog of the war" option (true)
+                // Useful for setup
                 arGameField[i][j] = isSetup == true ? "~" : arGameField[i][j];
 
-                System.out.printf("%s ", arGameField[i][j]);
+                // Useful for the "fog of war" option (true)
+                if (isFogOfWar) {
+                    System.out.printf("%s ", arGameField[i][j].replace('O', '~'));
+                } else {
+                    System.out.printf("%s ", arGameField[i][j]);
+                }
+
             }
             System.out.printf("%n");
         }
@@ -81,7 +87,7 @@ public class GameField {
 
     public boolean updateFieldAfterShot(int row, int col){
         boolean isHit = false;
-        if (arGameField[row][col].equals("O")) {
+        if (arGameField[row][col].equals("O") || arGameField[row][col].equals("X")) {
             arGameField[row][col] = YOU_HIT_A_SHIP;
             isHit = true;
         } else {

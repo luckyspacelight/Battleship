@@ -497,6 +497,516 @@ files:
         }
     }
   learner_created: false
+- name: src/battleship/ShipsHandler.java
+  visible: true
+  text: |
+    package battleship;
+
+    import java.util.ArrayList;
+    import java.util.List;
+    import java.util.Scanner;
+
+    public class ShipsHandler {
+
+        private Ship ship01;
+        private Ship ship02;
+        private Ship ship03;
+        private Ship ship04;
+        private Ship ship05;
+        private Ship[] ships;
+
+        enum ShipNames {
+
+            AIRCRAFT_CARRIER(1, "Aircraft Carrier", 5),
+            BATTLESHIP(2, "Battleship", 4),
+            SUBMARINE(3, "Submarine", 3),
+            CRUISER(4, "Cruiser", 3),
+            DESTROYER(5, "Destroyer", 2);
+
+            int ordinal;
+            String name;
+            int cellsNum;
+
+            ShipNames(int ordinal, String name, int cellsNum) {
+                this.ordinal = ordinal;
+                this.name = name;
+                this.cellsNum = cellsNum;
+            }
+        }
+
+        public ShipsHandler() {
+            this.ship01 = new Ship(ShipNames.AIRCRAFT_CARRIER.name, ShipNames.AIRCRAFT_CARRIER.cellsNum);
+            this.ship02 = new Ship(ShipNames.BATTLESHIP.name, ShipNames.BATTLESHIP.cellsNum);
+            this.ship03 = new Ship(ShipNames.SUBMARINE.name, ShipNames.SUBMARINE.cellsNum);
+            this.ship04 = new Ship(ShipNames.CRUISER.name, ShipNames.CRUISER.cellsNum);
+            this.ship05 = new Ship(ShipNames.DESTROYER.name, ShipNames.DESTROYER.cellsNum);
+
+            ships = new Ship[5];
+            ships[0] = ship01;
+            ships[1] = ship02;
+            ships[2] = ship03;
+            ships[3] = ship04;
+            ships[4] = ship05;
+        }
+
+
+        public Ship getShip01() {
+            return ship01;
+        }
+
+        public void setShip01(Ship ship01) {
+            this.ship01 = ship01;
+        }
+
+        public Ship getShip02() {
+            return ship02;
+        }
+
+        public void setShip02(Ship ship02) {
+            this.ship02 = ship02;
+        }
+
+        public Ship getShip03() {
+            return ship03;
+        }
+
+        public void setShip03(Ship ship03) {
+            this.ship03 = ship03;
+        }
+
+        public Ship getShip04() {
+            return ship04;
+        }
+
+        public void setShip04(Ship ship04) {
+            this.ship04 = ship04;
+        }
+
+        public Ship getShip05() {
+            return ship05;
+        }
+
+        public void setShip05(Ship ship05) {
+            this.ship05 = ship05;
+        }
+
+        @Override
+        public String toString() {
+            String ships = ship01.getName() + "\n";
+            ships += ship02.getName() + "\n";
+            ships += ship03.getName() + "\n";
+            ships += ship04.getName() + "\n";
+            ships += ship05.getName() + "\n";
+            return ships;
+        }
+
+        public void setupShips(GameField gf) {
+            for (Ship ship : ships) {
+                ship.placeShip(gf);
+            }
+        }
+
+    }
+  learner_created: true
+- name: src/battleship/Helper.java
+  visible: true
+  text: |
+    package battleship;
+
+    public class Helper {
+
+        public static int countDigits(int num1, int num2) {
+            int count = 0;
+            for (int i = num1; i <= num2; i++) {
+                count ++;
+            }
+            return count;
+        }
+
+
+        public static boolean checkErrors(int rowFC, int colFC, int rowTC, int colTC, Ship ship, GameField gf) {
+
+            boolean noError = true;
+            boolean isCloseToAShip = false;
+            int cellsNumDigited = 0;
+
+
+            if (rowFC == rowTC) {
+                cellsNumDigited = countDigits(Math.min(colFC, colTC), Math.max(colFC, colTC));
+            } else if (colFC == colTC) {
+                cellsNumDigited = countDigits(Math.min(rowFC, rowTC), Math.max(rowFC, rowTC));
+            }
+
+            try {
+
+                if (rowFC > 9 || colFC > 9 || rowTC > 9 || colTC > 9) {
+                    noError = false;
+                    throw new IllegalArgumentException("Error! Out of the 10x10 field. Try again:");
+                }
+
+                if (rowFC != rowTC && colFC != colTC) {
+                    noError = false;
+                    throw new IllegalArgumentException("Error! Wrong ship location! Try again:");
+                }
+
+                if (cellsNumDigited != ship.getCellsNumber()) {
+                    noError = false;
+                    throw new IllegalArgumentException("Error! Wrong length of the " + ship.getName() + ". Try again:");
+                }
+
+                isCloseToAShip = checkThePosition(rowFC, colFC, rowTC, colTC, gf, isCloseToAShip);
+
+                if (isCloseToAShip) {
+                    noError = false;
+                    throw new IllegalArgumentException("Error! You placed it too close to another one. Try again:");
+                }
+
+
+            } catch (IllegalArgumentException e) {
+                System.out.printf("%n%s%n ", e.getMessage());
+            } finally {
+                return noError;
+            }
+        }
+
+
+        public static boolean checkError(int row, int col) {
+
+            boolean noError = true;
+
+            try {
+                if (row > 9 || col > 9 || row < 0 || col < 0) {
+                    noError = false;
+                    throw new IllegalArgumentException("Error! You entered the wrong coordinates! Try again:");
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.printf("%n%s%n%n", e.getMessage());
+            } finally {
+                return noError;
+            }
+        }
+
+        public static boolean checkThePosition(int rowFC, int colFC, int rowTC, int colTC,
+                                               GameField gf, boolean isCloseToAShip) {
+
+            String[][] arGameField = gf.getArGameField();
+
+            if(rowFC == rowTC) {
+                for (int i = Math.min(colFC, colTC); i <= Math.max(colFC, colTC); i++) {
+                    int col = i;
+                    int row = rowFC;
+
+                    if (arGameField[row][col].equals("O")) {
+                        isCloseToAShip = true;
+                        break;
+                    }
+
+                    if (arGameField[row][col = col == 9 ? 9 : col + 1].equals("O")) {
+                        isCloseToAShip = true;
+                        break;
+                    }
+
+                    col = i;
+                    if (arGameField[row][col = col == 0 ? 0 : col - 1].equals("O")) {
+                        isCloseToAShip = true;
+                        break;
+                    }
+
+                    col = i;
+                    if (arGameField[row = row == 9 ? 9 : row + 1][col].equals("O")) {
+                        isCloseToAShip = true;
+                        break;
+                    }
+
+                    row = rowFC;
+                    if (arGameField[row = row == 0 ? 0 : row - 1][col].equals("O")) {
+                        isCloseToAShip = true;
+                        break;
+                    }
+                }
+            } else if (colFC == colTC) {
+                for (int i = Math.min(rowFC, rowTC); i <= Math.max(rowFC, rowTC); i++) {
+                    int row = i;
+                    int col = colFC;
+
+                    if (arGameField[i][col].equals("O")) {
+                        isCloseToAShip = true;
+                        break;
+                    }
+
+                    if (arGameField[row][col = col == 9 ? 9 : col + 1].equals("O")) {
+                        isCloseToAShip = true;
+                        break;
+                    }
+
+                    col = colFC;
+                    if (arGameField[row][col = col == 0 ? 0 : col - 1].equals("O")) {
+                        isCloseToAShip = true;
+                        break;
+                    }
+
+                    col = colFC;
+                    if (arGameField[row = row == 9 ? 9 : row + 1][col].equals("O")) {
+                        isCloseToAShip = true;
+                        break;
+                    }
+
+                    row = i;
+                    if (arGameField[row = row == 0 ? 0 : row - 1][col].equals("O")) {
+                        isCloseToAShip = true;
+                        break;
+                    }
+                }
+            }
+            return isCloseToAShip;
+        }
+    }
+  learner_created: true
+- name: src/battleship/GameHandler.java
+  visible: true
+  text: |
+    package battleship;
+
+    import java.util.Scanner;
+
+    public class GameHandler {
+
+        public void startTheGame(GameField gf) {
+            System.out.println("The game starts!\n");
+            gf.showGameField(false);
+            System.out.println();
+        }
+
+        public void takeAShot(GameField gf) {
+
+            boolean noError = true;
+            int rowShot = 0;
+            int colShot = 0;
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Take a shot!\n");
+
+            do {
+                // Input shot coordinate
+                String theShot = scanner.nextLine().toUpperCase();
+
+                // Shot coordinate
+                rowShot = theShot.substring(0,1).charAt(0) - 65;
+                colShot = Integer.parseInt(theShot.substring(1)) - 1;
+
+                // Check errors
+                noError = Helper.checkError(rowShot, colShot);
+
+            } while (noError == false);
+
+            if (noError) {
+                // Update Game Field
+                boolean isTheShipHit = gf.updateFieldAfterShot(rowShot, colShot);
+
+                // Show the Game Field
+                System.out.println();
+                gf.showGameField(false);
+                System.out.println();
+                if (isTheShipHit) {
+                    System.out.println("You hit a ship!");
+                } else {
+                    System.out.println("You missed!");
+                }
+            }
+        }
+
+    }
+  learner_created: true
+- name: src/battleship/GameField.java
+  visible: true
+  text: |
+    package battleship;
+
+    public class GameField {
+
+        private int rows;
+        private int columns;
+        private boolean gridHdFc;
+        private String[][] arGameField;
+
+        private final static String YOU_MISSED = "M";
+        private final static String YOU_HIT_A_SHIP = "X";
+
+        public GameField(int rows, int columns, boolean gridHdFc)  {
+            this.rows = rows;
+            this.columns = columns;
+            this.gridHdFc = gridHdFc;
+            this.arGameField = new String[rows][columns];
+        }
+
+        public int getRows() {
+            return rows;
+        }
+
+        public int getColumns() {
+            return columns;
+        }
+
+        public String[][] getArGameField() {
+            return arGameField;
+        }
+
+        public void showGameField(boolean isSetup) {
+
+            // Print header (first row)
+            if (gridHdFc) {
+                String hd = "";
+                final int cols = this.getColumns();
+                for (int i = 0; i <= cols; i++) {
+                    if (i == 0) {
+                        hd = " ";
+                    } else if (i == cols) {
+                        hd = " %d%n";
+                    } else {
+                        hd = " %d";
+                    }
+                    System.out.printf(hd, i);
+                }
+            }
+
+            // Print game field
+            int A = 65;
+            for (int i = 0; i < arGameField.length; i++) {
+                for (int j = 0; j < arGameField[i].length; j++) {
+
+                    // Print first column
+                    if (j == 0 && gridHdFc) {
+                        System.out.printf("%c ".toUpperCase(), 'a' + i);
+                    }
+
+                    // Useful for setup and "the fog of the war" option (true)
+                    arGameField[i][j] = isSetup == true ? "~" : arGameField[i][j];
+
+                    System.out.printf("%s ", arGameField[i][j]);
+                }
+                System.out.printf("%n");
+            }
+
+        }
+
+        public void updateGameField(int rowFC, int colFC, int rowTC, int colTC){
+            if (rowFC == rowTC) {
+                for (int i = Math.min(colFC, colTC); i <= Math.max(colFC, colTC); i++) {
+                    arGameField[rowFC][i] = "O";
+                }
+            } else if (colFC == colTC) {
+                for (int i = Math.min(rowFC, rowTC); i <= Math.max(rowFC, rowTC); i++) {
+                    arGameField[i][colFC] = "O";
+                }
+            }
+        }
+
+        public boolean updateFieldAfterShot(int row, int col){
+            boolean isHit = false;
+            if (arGameField[row][col].equals("O")) {
+                arGameField[row][col] = YOU_HIT_A_SHIP;
+                isHit = true;
+            } else {
+                arGameField[row][col] = YOU_MISSED;
+            }
+            return isHit;
+        }
+
+    }
+  learner_created: true
+- name: src/battleship/Ship.java
+  visible: true
+  text: |
+    package battleship;
+
+    import java.util.Scanner;
+
+    public class Ship {
+
+        private String name;
+        private int cellsNumber;
+        private String[] locationCells;
+
+        public Ship(String name, int cellsNumber) {
+            this.name = name;
+            this.cellsNumber = cellsNumber;
+        }
+
+        public String[] getLocationCells() {
+            return locationCells;
+        }
+
+        public void setLocationCells(String[] locationCells) {
+            this.locationCells = locationCells;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getCellsNumber() {
+            return cellsNumber;
+
+        }
+
+        public void setCellsNumber(int cellsNumber) {
+            this.cellsNumber = cellsNumber;
+        }
+
+        public void placeShip(GameField gf) {
+
+            Scanner scanner = new Scanner(System.in);
+            String startString = "Enter the coordinates of the";
+            System.out.printf("%s %s (%d cells):%n", startString, this.getName(), this.getCellsNumber());
+            boolean noError = true;
+            String fromCell = "";
+            String toCell = "";
+            int rowFC = 0;
+            int colFC = 0;
+            int rowTC = 0;
+            int colTC = 0;
+
+            do {
+                fromCell = scanner.next().toUpperCase();
+                toCell = scanner.next().toUpperCase();
+
+                // First coordinate (from Cell)
+                rowFC = fromCell.substring(0,1).charAt(0) - 65;
+                colFC = Integer.parseInt(fromCell.substring(1)) - 1;
+
+                // Second coordinate (to Cell)
+                rowTC = toCell.substring(0,1).charAt(0) - 65;
+                colTC = Integer.parseInt(toCell.substring(1)) - 1;
+
+                // Check errors
+                noError = Helper.checkErrors(rowFC, colFC, rowTC, colTC, this, gf);
+
+            } while (noError == false);
+
+
+            if (noError) {
+                // Update ship fields
+                this.setLocationCells(new String[] {fromCell, toCell});
+
+                // Update Game Field
+                gf.updateGameField(rowFC, colFC, rowTC, colTC);
+
+                // Show the Game Field
+                System.out.println();
+                gf.showGameField(false);
+                System.out.println();
+            }
+        }
+
+    }
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/10596#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 08 Feb 2023 17:44:40 UTC"
+record: 3

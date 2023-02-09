@@ -45,6 +45,7 @@ public class ShipsHandler {
         ships[2] = ship03;
         ships[3] = ship04;
         ships[4] = ship05;
+
     }
 
 
@@ -88,6 +89,10 @@ public class ShipsHandler {
         this.ship05 = ship05;
     }
 
+    public Ship[] getShips() {
+        return ships;
+    }
+
     @Override
     public String toString() {
         String ships = ship01.getName() + "\n";
@@ -101,6 +106,16 @@ public class ShipsHandler {
     public void setupShips(GameField gf) {
         for (Ship ship : ships) {
             ship.placeShip(gf);
+        }
+    }
+
+    // TEST | Il metodo, da rimuovere
+    public void testInputCoord() {
+        for (Ship ship : ships) {
+            String[][] arTest = ship.getLocationCells();
+            for (int i = 0; i < arTest.length; i++) {
+                System.out.printf("%s, ", arTest[i][0]);
+            }
         }
     }
 

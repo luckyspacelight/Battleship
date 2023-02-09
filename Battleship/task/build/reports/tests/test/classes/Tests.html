@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.063s</div>
+<div class="counter">2.153s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">start</td>
-<td class="success">1.063s</td>
+<td class="success">2.153s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -188,16 +188,16 @@ J ~ O ~ ~ ~ ~ ~ O O O
 The game starts!
 
   1 2 3 4 5 6 7 8 9 10
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-B O ~ ~ ~ ~ ~ ~ ~ O ~ 
-C O ~ ~ ~ ~ ~ ~ ~ O ~ 
-D O ~ ~ ~ ~ ~ ~ ~ O ~ 
+A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-F ~ ~ O O O O O ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-I ~ O ~ ~ ~ ~ ~ ~ ~ ~ 
-J ~ O ~ ~ ~ ~ ~ O O O 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 
 Take a shot!
 
@@ -205,17 +205,401 @@ Take a shot!
 
   1 2 3 4 5 6 7 8 9 10
 A X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-B O ~ ~ ~ ~ ~ ~ ~ O ~ 
-C O ~ ~ ~ ~ ~ ~ ~ O ~ 
-D O ~ ~ ~ ~ ~ ~ ~ O ~ 
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-F ~ ~ O O O O O ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-I ~ O ~ ~ ~ ~ ~ ~ ~ ~ 
-J ~ O ~ ~ ~ ~ ~ O O O 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 
-You hit a ship!
+You sank a ship! Specify a new target:
+
+&gt; A2
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; B1
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; C1
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+C X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; D1
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+C X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; E4
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+C X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ M ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; B9
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ M ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You sank a ship! Specify a new target:
+
+&gt; C9
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ M ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; D9
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; E9
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; F3
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X ~ ~ ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; F4
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X ~ ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; F5
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; F6
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; F7
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X X ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You sank a ship! Specify a new target:
+
+&gt; F10
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X X ~ ~ M 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; G8
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X X ~ ~ M 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; G5
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X X ~ ~ M 
+G ~ ~ ~ ~ M ~ ~ M ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; H2
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X X ~ ~ M 
+G ~ ~ ~ ~ M ~ ~ M ~ ~ 
+H ~ M ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; I2
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X X ~ ~ M 
+G ~ ~ ~ ~ M ~ ~ M ~ ~ 
+H ~ M ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ X ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You sank a ship! Specify a new target:
+
+&gt; J2
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X X ~ ~ M 
+G ~ ~ ~ ~ M ~ ~ M ~ ~ 
+H ~ M ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ X ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ X ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; J6
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X X ~ ~ M 
+G ~ ~ ~ ~ M ~ ~ M ~ ~ 
+H ~ M ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ X ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ X ~ ~ ~ M ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; J8
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X X ~ ~ M 
+G ~ ~ ~ ~ M ~ ~ M ~ ~ 
+H ~ M ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ X ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ X ~ ~ ~ M ~ X ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; J9
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X X ~ ~ M 
+G ~ ~ ~ ~ M ~ ~ M ~ ~ 
+H ~ M ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ X ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ X ~ ~ ~ M ~ X X ~ 
+
+You hit a ship! Try again:
+
+&gt; J10
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ X ~ 
+C X ~ ~ ~ ~ ~ ~ ~ X ~ 
+D X ~ ~ ~ ~ ~ ~ ~ X ~ 
+E ~ ~ ~ M ~ ~ ~ ~ M ~ 
+F ~ ~ X X X X X ~ ~ M 
+G ~ ~ ~ ~ M ~ ~ M ~ ~ 
+H ~ M ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ X ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ X ~ ~ ~ M ~ X X X 
+
+You sank the last ship. You won. Congratulations!
 ?[1;31m
 Start test 2?[0m
   1 2 3 4 5 6 7 8 9 10
@@ -317,45 +701,6 @@ J ~ ~ O O O O O ~ ~ ~
 The game starts!
 
   1 2 3 4 5 6 7 8 9 10
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-B O ~ ~ ~ O ~ ~ ~ ~ ~ 
-C O ~ ~ ~ O ~ ~ O ~ ~ 
-D ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-E ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-F ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-H O O O ~ ~ ~ ~ ~ ~ ~ 
-I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-J ~ ~ O O O O O ~ ~ ~ 
-
-Take a shot!
-
-&gt; M1
-
-Error! You entered the wrong coordinates! Try again:
-
-&gt; A11
-
-Error! You entered the wrong coordinates! Try again:
-
-&gt; E4
-
-  1 2 3 4 5 6 7 8 9 10
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-B O ~ ~ ~ O ~ ~ ~ ~ ~ 
-C O ~ ~ ~ O ~ ~ O ~ ~ 
-D ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-E ~ ~ ~ M ~ ~ ~ O ~ ~ 
-F ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-H O O O ~ ~ ~ ~ ~ ~ ~ 
-I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-J ~ ~ O O O O O ~ ~ ~ 
-
-You missed!
-?[1;31m
-Start test 3?[0m
-  1 2 3 4 5 6 7 8 9 10
 A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
@@ -367,11 +712,12 @@ H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 
-Enter the coordinates of the Aircraft Carrier (5 cells):
-&gt; J3 J7
+Take a shot!
+
+&gt; A1
 
   1 2 3 4 5 6 7 8 9 10
-A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+A X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
@@ -380,108 +726,457 @@ F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-J ~ ~ O O O O O ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 
-Enter the coordinates of the Battleship (4 cells):
-&gt; C8 B8
+You sank a ship! Specify a new target:
 
-Error! Wrong length of the Battleship. Try again:
- &gt; C8 F8
+&gt; A2
 
   1 2 3 4 5 6 7 8 9 10
-A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
 B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-C ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-D ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-E ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-F ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-J ~ ~ O O O O O ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 
-Enter the coordinates of the Submarine (3 cells):
-&gt; A1 C2
+You missed! Try again:
 
-Error! Wrong ship location! Try again:
- &gt; A1 C1
+&gt; B1
 
   1 2 3 4 5 6 7 8 9 10
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-B O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-C O ~ ~ ~ ~ ~ ~ O ~ ~ 
-D ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-E ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-F ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-J ~ ~ O O O O O ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 
-Enter the coordinates of the Cruiser (3 cells):
-&gt; H1 H3
+You hit a ship! Try again:
 
-  1 2 3 4 5 6 7 8 9 10
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-B O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-C O ~ ~ ~ ~ ~ ~ O ~ ~ 
-D ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-E ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-F ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-H O O O ~ ~ ~ ~ ~ ~ ~ 
-I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-J ~ ~ O O O O O ~ ~ ~ 
-
-Enter the coordinates of the Destroyer (2 cells):
-&gt; G2 E2
-
-Error! Wrong length of the Destroyer. Try again:
- &gt; E5 F5
+&gt; C1
 
   1 2 3 4 5 6 7 8 9 10
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-B O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-C O ~ ~ ~ ~ ~ ~ O ~ ~ 
-D ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-E ~ ~ ~ ~ O ~ ~ O ~ ~ 
-F ~ ~ ~ ~ O ~ ~ O ~ ~ 
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+C X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-H O O O ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-J ~ ~ O O O O O ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 
-The game starts!
+You hit a ship! Try again:
+
+&gt; D1
 
   1 2 3 4 5 6 7 8 9 10
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-B O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-C O ~ ~ ~ ~ ~ ~ O ~ ~ 
-D ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-E ~ ~ ~ ~ O ~ ~ O ~ ~ 
-F ~ ~ ~ ~ O ~ ~ O ~ ~ 
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+C X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D M ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-H O O O ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-J ~ ~ O O O O O ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 
-Take a shot!
+You missed! Try again:
+
+&gt; F5
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+C X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D M ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ M ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; B5
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ ~ X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D M ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ M ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You sank a ship! Specify a new target:
+
+&gt; B4
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+D M ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ M ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; C5
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ ~ ~ ~ 
+D M ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ M ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; H8
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ ~ ~ ~ 
+D M ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ M ~ ~ ~ ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; F8
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ ~ ~ ~ 
+D M ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; G8
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ ~ ~ ~ 
+D M ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
 
 &gt; E8
 
   1 2 3 4 5 6 7 8 9 10
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-B O ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-C O ~ ~ ~ ~ ~ ~ O ~ ~ 
-D ~ ~ ~ ~ ~ ~ ~ O ~ ~ 
-E ~ ~ ~ ~ O ~ ~ X ~ ~ 
-F ~ ~ ~ ~ O ~ ~ O ~ ~ 
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-H O O O ~ ~ ~ ~ ~ ~ ~ 
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ ~ ~ ~ 
+D M ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
 I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-J ~ ~ O O O O O ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 
-You hit a ship!
+You hit a ship! Try again:
+
+&gt; D8
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ ~ ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; C8
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You sank a ship! Specify a new target:
+
+&gt; D8
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; I9
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ M ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; H1
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X ~ ~ ~ ~ ~ ~ M ~ ~ 
+I ~ ~ ~ ~ ~ ~ ~ ~ M ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; I1
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X ~ ~ ~ ~ ~ ~ M ~ ~ 
+I M ~ ~ ~ ~ ~ ~ ~ M ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; H2
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X X ~ ~ ~ ~ ~ M ~ ~ 
+I M ~ ~ ~ ~ ~ ~ ~ M ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; H3
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ ~ ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X X X ~ ~ ~ ~ M ~ ~ 
+I M ~ ~ ~ ~ ~ ~ ~ M ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You sank a ship! Specify a new target:
+
+&gt; E2
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ M ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X X X ~ ~ ~ ~ M ~ ~ 
+I M ~ ~ ~ ~ ~ ~ ~ M ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; I8
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ M ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X X X ~ ~ ~ ~ M ~ ~ 
+I M ~ ~ ~ ~ ~ ~ M M ~ 
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+You missed! Try again:
+
+&gt; J7
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ M ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X X X ~ ~ ~ ~ M ~ ~ 
+I M ~ ~ ~ ~ ~ ~ M M ~ 
+J ~ ~ ~ ~ ~ ~ X ~ ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; J8
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ M ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X X X ~ ~ ~ ~ M ~ ~ 
+I M ~ ~ ~ ~ ~ ~ M M ~ 
+J ~ ~ ~ ~ ~ ~ X M ~ ~ 
+
+You missed! Try again:
+
+&gt; J6
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ M ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X X X ~ ~ ~ ~ M ~ ~ 
+I M ~ ~ ~ ~ ~ ~ M M ~ 
+J ~ ~ ~ ~ ~ X X M ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; J5
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ M ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X X X ~ ~ ~ ~ M ~ ~ 
+I M ~ ~ ~ ~ ~ ~ M M ~ 
+J ~ ~ ~ ~ X X X M ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; J4
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ M ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X X X ~ ~ ~ ~ M ~ ~ 
+I M ~ ~ ~ ~ ~ ~ M M ~ 
+J ~ ~ ~ X X X X M ~ ~ 
+
+You hit a ship! Try again:
+
+&gt; J3
+
+  1 2 3 4 5 6 7 8 9 10
+A X M ~ ~ ~ ~ ~ ~ ~ ~ 
+B X ~ ~ M X ~ ~ ~ ~ ~ 
+C X ~ ~ ~ X ~ ~ X ~ ~ 
+D M ~ ~ ~ ~ ~ ~ X ~ ~ 
+E ~ M ~ ~ ~ ~ ~ X ~ ~ 
+F ~ ~ ~ ~ M ~ ~ X ~ ~ 
+G ~ ~ ~ ~ ~ ~ ~ M ~ ~ 
+H X X X ~ ~ ~ ~ M ~ ~ 
+I M ~ ~ ~ ~ ~ ~ M M ~ 
+J ~ ~ X X X X X M ~ ~ 
+
+You sank the last ship. You won. Congratulations!
 </pre>
 </span>
 </div>
@@ -493,7 +1188,7 @@ You hit a ship!
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at 8 feb 2023, 16:07:09</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 9 feb 2023, 03:50:18</p>
 </div>
 </div>
 </body>
