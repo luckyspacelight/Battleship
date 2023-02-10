@@ -1,0 +1,36 @@
+<h2>What does the code output</h2>
+<p>Here's a class hierarchy consisting of four classes.</p>
+
+<p> </p>
+
+<pre><code class="language-java">class A {
+    
+    public void print() {
+        System.out.println("class-A");
+    }
+}
+
+class B extends A { }
+
+class C extends B {
+    
+    public void print() {
+        System.out.println("class-C");
+    }
+}
+
+class D extends C {
+
+    public void print() {
+        System.out.println("class-D");
+    }   
+}</code></pre>
+
+<p> </p>
+
+<p>What does the code below output?</p>
+
+<p> </p>
+
+<pre><code class="language-java">B instance = new C();
+instance.print();</code></pre>

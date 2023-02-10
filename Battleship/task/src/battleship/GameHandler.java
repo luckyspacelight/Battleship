@@ -4,30 +4,39 @@ import java.util.Scanner;
 
 public class GameHandler {
 
-    public void startTheGame(GameField gf) {
-        System.out.println("The game starts!\n");
-        gf.showGameField(false, true);
-        System.out.println();
+    public void showTwoScreens(GameField gf1, GameField gf2, int player) {
+
+        if (player == 1) {
+            gf2.showGameField(false, true);
+            System.out.println("---------------------");
+            gf1.showGameField(false, false);
+            System.out.println();
+        } else if (player == 2) {
+            gf1.showGameField(false, true);
+            System.out.println("---------------------");
+            gf2.showGameField(false, false);
+            System.out.println();
+        }
+
     }
 
-    public void takeAShot(GameField gf, ShipsHandler sh) {
+
+    public Boolean takeAShot(GameField gf1, GameField gf2, ShipsHandler sh, int player, boolean unsunkShips) {
 
         boolean noError = true;
-        boolean unsunkShips = true;
         boolean shipIsSunk = false;
         String theShot = "";
 
         int rowShot = 0;
         int colShot = 0;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Take a shot!\n");
+        Scanner sc = new Scanner(System.in);
+        System.out.printf("Player %d, it's your turn:%n%n", player);
 
-        while (unsunkShips) {
 
             do {
                 // Input shot coordinate
-                theShot = scanner.nextLine().toUpperCase();
+                theShot = sc.nextLine().toUpperCase();
 
                 // Shot coordinate
                 rowShot = theShot.substring(0,1).charAt(0) - 65;
@@ -40,29 +49,30 @@ public class GameHandler {
 
             if (noError) {
                 // Update Game Field
-                boolean isTheShipHit = gf.updateFieldAfterShot(rowShot, colShot);
+                boolean isTheShipHit = false;
+                if (player == 1) {
+                    isTheShipHit = gf2.updateFieldAfterShot(rowShot, colShot);
+                } else if (player == 2) {
+                    isTheShipHit = gf1.updateFieldAfterShot(rowShot, colShot);
+                }
 
                 // Update the ship coordinate
                 if (isTheShipHit) {
-                    for (Ship ship : sh.getShips()) {
+                    for (Ship ship : sh.getShips(player)) {
                         String[][] arTest = ship.getLocationCells();
                         for (int i = 0; i < arTest.length; i++) {
                             if (theShot.equals(arTest[i][0])) {
                                 arTest[i][1] = "X";
                             }
+                            System.out.println("TEST: theShot=" + theShot + " Position="+ arTest[i][0] + " -> " + arTest[i][1]);
                         }
                     }
                 }
 
-                // Show the Game Field
-                System.out.println();
-                gf.showGameField(false, true);
-
-                /* TODO Inserire il controllo di affondamento di una nave */
                 if (isTheShipHit) {
 
                     // Check if a ship is sunk
-                    for (Ship ship : sh.getShips()) {
+                    for (Ship ship : sh.getShips(player)) {
                         if (!ship.isSunk()){
                             for (int i = 0; i < ship.getLocationCells().length; i++) {
                                 ship.setSunk(true);
@@ -83,7 +93,7 @@ public class GameHandler {
                     // I check if all ships are sunk
                     if (shipIsSunk) {
                         unsunkShips = false;
-                        for (Ship ship : sh.getShips()) {
+                        for (Ship ship : sh.getShips(player)) {
                             if (ship.isSunk() == false) {
                                 unsunkShips = true;
                                 break;
@@ -94,18 +104,20 @@ public class GameHandler {
                     if (shipIsSunk) {
                         if (unsunkShips == false) {
                             System.out.println("\nYou sank the last ship. You won. Congratulations!");
+                            return false;
                         } else {
-                            System.out.println("\nYou sank a ship! Specify a new target:\n");
+                            System.out.println("\nYou sank a ship!");
                             shipIsSunk = false;
                         }
                     } else {
-                        System.out.println("\nYou hit a ship! Try again:\n");
+                        System.out.println("\nYou hit a ship!");
                     }
                 } else {
-                    System.out.println("\nYou missed! Try again:\n");
+                    System.out.println("\nYou missed!");
                 }
             }
-        }
-
+            Helper.passToAnotherPlayer();
+        return true;
     }
+
 }

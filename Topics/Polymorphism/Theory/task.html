@@ -1,0 +1,92 @@
+<h2>Polymorphism</h2>
+<h5 id="kinds-of-polymorphism" style="text-align: center;">Kinds of polymorphism</h5>
+<p>In general, <strong>polymorphism</strong> means that something (an object or another entity) has many forms.</p>
+<p>Java provides two types of polymorphism: <strong>static (compile-time)</strong> and <strong>dynamic</strong> <strong>(run-time) </strong>polymorphism. The first one is achieved by <strong>method overloading</strong>, the second one is based on inheritance and <strong>method overriding</strong>.</p>
+<p>The more theoretical approach subdivides polymorphism into several fundamentally different types:</p>
+<ul>
+<li><strong>Ad-hoc polymorphism</strong> refers to polymorphic functions that can be applied to arguments of different types, but behave differently depending on the type of the argument to which they are applied. Java supports it as <strong>method overloading</strong>.</li>
+<li><strong>Subtype polymorphism</strong> (also known as subtyping) is a possibility to use an instance of a subclass when an instance of the base class is permitted.</li>
+<li><strong>Parametric polymorphism </strong>is when the code is written without mention of any specific type and thus can be used transparently with any number of new types. Java supports it as <strong>generics</strong> or <strong>generic programming</strong>.</li>
+</ul>
+<p>In this topic, we consider only <strong>subtype (runtime) polymorphism</strong> that is widely used in object-oriented programming.</p>
+<h5 id="runtime-polymorphic-behavior" style="text-align: center;">Runtime polymorphic behavior</h5>
+<p>A reminder: <em>method overriding</em> is when a subclass redefines a method of the superclass with the same signature.</p>
+<p>Run-time polymorphism relies on two principles:</p>
+<ul>
+<li>a reference variable of the superclass can refer to any subtype object;</li>
+<li>a superclass method can be overridden in a subclass.</li>
+</ul>
+<p>Run-time polymorphism works when an overridden method is called through the reference variable of a superclass.<strong> </strong>Java determines at runtime which version of the method (superclass/subclasses) is to be executed based on the type of the object being referred, not the type of reference. It uses a mechanism known as <strong>dynamic method dispatching</strong>.</p>
+<p><strong>Example. </strong>Here, you can see a class hierarchy. The superclass <code class="language-java">MythicalAnimal</code> has two subclasses: <code class="language-java">Chimera</code> and <code class="language-java">Dragon</code>. The base class has a method <code class="language-java">hello</code>. Both subclasses override this method.</p>
+<pre><code class="language-java">class MythicalAnimal {    
+
+    public void hello() {
+        System.out.println("Hello, I'm an unknown animal");
+    }
+}
+
+class Chimera extends MythicalAnimal {
+    @Override
+    public void hello() {
+        System.out.println("Hello! Hello!");
+    }
+}
+
+class Dragon extends MythicalAnimal {
+    @Override
+    public void hello() {
+        System.out.println("Rrrr...");
+    }
+}</code></pre>
+<p>We can create a reference to the class <code class="language-java">MythicalAnimal</code> and assign the subclass object to it:</p>
+<pre><code class="language-java">MythicalAnimal chimera = new Chimera();
+MythicalAnimal dragon = new Dragon();
+MythicalAnimal animal = new MythicalAnimal();</code></pre>
+<p>We can also invoke overridden methods through the base class references:</p>
+<pre><code class="language-java">chimera.hello(); // Hello! Hello!
+dragon.hello(); // Rrrr...
+animal.hello(); // Hello, I'm an unknown animal</code></pre>
+<p>So, the result of a method call depends on the actual type of an instance, not the reference type. It's a polymorphic feature in Java. The JVM calls the appropriate method for the object that is referred to in each variable.</p>
+<p>Subtype polymorphism allows a class to specify methods that will be common to all of its subclasses. Subtype polymorphism also makes it possible for subclasses to override the implementations of those methods. Together with abstract methods and interfaces, which you'll learn about later, subtype polymorphism is a fundamental object-oriented design concept.</p>
+<h5 id="polymorphism-within-a-class-hierarchy" style="text-align: center;">Polymorphism within a class hierarchy</h5>
+<p>The same thing works with methods that are used only within a hierarchy and are not accessible from the outside.</p>
+<p>In the following example, we have a hierarchy<strong> </strong>of files. The parent class <code class="language-java">File</code> represents a description of a single file in the file system. It has a subclass named <code class="language-java">ImageFile</code>.  It overrides the method <code class="language-java">getFileInfo</code> of the parent class.</p>
+<pre><code class="language-java">class File {
+
+    protected String fullName;
+
+    // constructor with a single parameter
+
+    // getters and setters
+
+    public void printFileInfo() {
+        String info = this.getFileInfo(); // here is polymorphic behavior!!!
+        System.out.println(info);
+    }
+
+    protected String getFileInfo() {
+        return "File: " + fullName;
+    }
+}
+
+class ImageFile extends File {
+
+    protected int width;
+    protected int height;
+    protected byte[] content;
+
+    // constructor
+
+    // getters and setters
+
+    @Override
+    protected String getFileInfo() {
+        return String.format("Image: %s, width: %d, height: %d", fullName, width, height); 
+    }
+}</code></pre>
+<p>The parent class has a public method <code class="language-java">printFileInfo</code> and a protected method <code class="language-java">getFileInfo</code>. The second method is overridden in the subclass, but the subclass doesn't override the first method.</p>
+<p>Let's create an instance of <code class="language-java">ImageFile</code> and assign it to a variable of <code class="language-java">File</code>.</p>
+<pre><code class="language-java">File img = new ImageFile("/path/to/file/img.png", 480, 640, someBytes); // assigning an object</code></pre>
+<p>Now, when we call the method <code class="language-java">printFileInfo</code>, it invokes the overridden version of the method <code class="language-java">getFileInfo</code>.</p>
+<pre><code class="language-java">img.printFileInfo(); // It prints "Image: /path/to/file/img.png, width: 480, height: 640"</code></pre>
+<p>So, <strong>run-time polymorphism</strong> allows you to invoke an overridden method of a subclass having a reference to the base class.</p>

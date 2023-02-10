@@ -1,0 +1,26 @@
+<h2>Runtime polymorphic behavior</h2>
+<p>You have an inheritance hierarchy consisting of two classes.</p>
+
+<p>The base class.</p>
+
+<pre><code class="language-java">public class BaseClass {
+
+    public void print() {
+        System.out.println("Base class");
+    }
+}</code></pre>
+
+<p>The derived class.</p>
+
+<pre><code class="language-java">public class DerivedClass extends BaseClass {
+
+    public void print() {
+        System.out.println("Derived class");
+        super.print();
+    }
+}</code></pre>
+
+<p>What is the output of the code below?</p>
+
+<pre><code class="language-java">BaseClass clazz = new DerivedClass();
+clazz.print();</code></pre>

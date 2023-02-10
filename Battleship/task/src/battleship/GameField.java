@@ -10,11 +10,11 @@ public class GameField {
     private final static String YOU_MISSED = "M";
     private final static String YOU_HIT_A_SHIP = "X";
 
-    public GameField(int rows, int columns, boolean gridHdFc)  {
-        this.rows = rows;
-        this.columns = columns;
+    public GameField(boolean gridHdFc, String[][] arGameField)  {
         this.gridHdFc = gridHdFc;
-        this.arGameField = new String[rows][columns];
+        this.arGameField = arGameField;
+        this.rows = arGameField.length;
+        this.columns = arGameField[0].length;
     }
 
     public int getRows() {

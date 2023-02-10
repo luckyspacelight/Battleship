@@ -91,7 +91,6 @@ public class Ship {
 
         } while (noError == false);
 
-
         if (noError) {
 
             // Insert ship cells in the ship location array
@@ -102,7 +101,7 @@ public class Ship {
                 }
             } else if (colFC == colTC) {   // Vertical ship
                 for (int i = Math.min(rowFC, rowTC), j = 0; i <= Math.max(rowFC, rowTC) && j < locationCells.length; i++, j++) {
-                    locationCells[j][0] = (char) (rowFC + 65) + colFCstr;
+                    locationCells[j][0] = (char) (i + 65) + colFCstr;
                     locationCells[j][1] = "O";
                 }
             }

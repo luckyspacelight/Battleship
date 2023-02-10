@@ -1,0 +1,30 @@
+<h2>What does the method print</h2>
+<html><body><p>Here is a hierarchy of four classes: <code class="language-java">A</code>, <code class="language-java">B</code>, <code class="language-java">C</code>, and <code class="language-java">D</code>.</p>
+<pre><code class="language-java">class A {
+
+    public void method() {
+        System.out.println("A");
+    }
+}
+
+class B extends A {
+
+    public void method() {
+        System.out.println("B");
+    }
+}
+
+class C extends B {
+
+}
+
+class D extends C {
+
+    public void method() {
+        super.method();
+    }
+}</code></pre>
+<p> </p>
+<p>What does this code print? Enter the resulting character.</p>
+<pre><code class="language-java">A a = new D();
+a.method();</code></pre></body></html>

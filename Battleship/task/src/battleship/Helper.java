@@ -1,5 +1,7 @@
 package battleship;
 
+import java.util.Scanner;
+
 public class Helper {
 
     public static int countDigits(int num1, int num2) {
@@ -146,5 +148,11 @@ public class Helper {
             }
         }
         return isCloseToAShip;
+    }
+
+    public static void passToAnotherPlayer() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Press Enter and pass the move to another player");
+        String input = scan.nextLine();
     }
 }

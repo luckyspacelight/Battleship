@@ -1,0 +1,61 @@
+<h2>Notification</h2>
+<p>You have a class hierarchy of notifications. The parent class is <code class="language-java">Notification</code>. It has two subclasses. Each subclass overrides a method.</p>
+
+<p> </p>
+
+<pre><code class="language-java">class Notification {
+    
+    protected String msg;
+    
+    public Notification(String msg) {
+        this.msg = msg;
+    }
+    
+    public void show() {
+        System.out.println(getMsg());
+    }
+    
+    public String getMsg() {
+        return msg;
+    }
+}
+
+class Warning extends Notification {
+    
+    public Warning(String msg) {
+        super(msg);
+    }
+    @Override
+    public String getMsg() {
+        return "WARN: " + msg;
+    }
+}
+
+class Alarm extends Notification {
+    
+    public Alarm(String msg) {
+        super(msg);
+    }
+    @Override
+    public void show() {
+        System.out.println("ALARM: " + msg);
+    }
+}
+</code></pre>
+
+<p> </p>
+
+<p>There are three objects:</p>
+
+<p> </p>
+
+<pre><code class="language-java">Notification notif = new Notification("No problems");
+
+Notification warn = new Warning("Money ends");
+        
+Notification alarm = new Alarm("The ship sank"); 
+</code></pre>
+
+<p> </p>
+
+<p>Select all correct statements about these objects.</p>

@@ -19,6 +19,9 @@
             <option value="$PROJECT_DIR$/Battleship/task/build/reports/tests" />
             <option value="$PROJECT_DIR$/Battleship/task/build/test-results" />
             <option value="$PROJECT_DIR$/Battleship/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Topics/Abstract class/About abstract classes" />
+            <option value="$PROJECT_DIR$/Topics/Abstract class/IntBinaryOperation" />
+            <option value="$PROJECT_DIR$/Topics/Abstract class/Theory" />
             <option value="$PROJECT_DIR$/Topics/Custom exceptions/Checked exception with constructor" />
             <option value="$PROJECT_DIR$/Topics/Custom exceptions/Custom exceptions features" />
             <option value="$PROJECT_DIR$/Topics/Custom exceptions/DriverNotReadyException" />
@@ -33,6 +36,11 @@
             <option value="$PROJECT_DIR$/Topics/Fields and methods in enum/Planets of the solar system" />
             <option value="$PROJECT_DIR$/Topics/Fields and methods in enum/System of units" />
             <option value="$PROJECT_DIR$/Topics/Fields and methods in enum/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Hiding and overriding/Publications" />
+            <option value="$PROJECT_DIR$/Topics/Hiding and overriding/Saying animals" />
+            <option value="$PROJECT_DIR$/Topics/Hiding and overriding/Shapes area" />
+            <option value="$PROJECT_DIR$/Topics/Hiding and overriding/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Hiding and overriding/Which methods will be overridden" />
             <option value="$PROJECT_DIR$/Topics/Input streams/Byte vs character input streams" />
             <option value="$PROJECT_DIR$/Topics/Input streams/Convert to bytes" />
             <option value="$PROJECT_DIR$/Topics/Input streams/Count words" />
@@ -64,6 +72,14 @@
             <option value="$PROJECT_DIR$/Topics/Package/Sorting arrays" />
             <option value="$PROJECT_DIR$/Topics/Package/The default import" />
             <option value="$PROJECT_DIR$/Topics/Package/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Polymorphism/Find mistake" />
+            <option value="$PROJECT_DIR$/Topics/Polymorphism/Notification" />
+            <option value="$PROJECT_DIR$/Topics/Polymorphism/Publication and its subclasses" />
+            <option value="$PROJECT_DIR$/Topics/Polymorphism/Runtime method resolution" />
+            <option value="$PROJECT_DIR$/Topics/Polymorphism/Runtime polymorphic behavior" />
+            <option value="$PROJECT_DIR$/Topics/Polymorphism/The time of overloading" />
+            <option value="$PROJECT_DIR$/Topics/Polymorphism/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Polymorphism/Type of polymorphism" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Collatz conjecture" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Squares of natural numbers" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The length of the sequence" />
